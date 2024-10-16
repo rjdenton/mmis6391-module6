@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Authors - Bookstore{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Authors</h1>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <table class="table table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Author Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for author in authors %}
+                        <tr>
+                            <td>{{ author[0] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

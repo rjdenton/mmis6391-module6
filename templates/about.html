@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - Bookstore{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">About Us</h1>
+    <p class="lead text-center">Your gateway to the world of books.</p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='images/bookstore_about.jpg') }}" class="img-fluid rounded" alt="About Us Image">
+        </div>
+        <div class="col-md-6">
+            <h3>Who We Are</h3>
+            <p>We are passionate book lovers dedicated to curating a diverse selection of literature for readers of all ages. Our bookstore is not just a place to buy books; it’s a community hub for fellow book enthusiasts. We strive to provide an inviting atmosphere where everyone feels welcome to explore, discover, and share their love for reading.</p>
+
+            <h3>Our Mission</h3>
+            <p>At our bookstore, we believe that every book has the power to inspire, educate, and entertain. Our mission is to connect readers with the stories and ideas that will enrich their lives. Whether you’re looking for a gripping novel, insightful non-fiction, or the latest bestseller, our knowledgeable staff is here to help you find your next great read.</p>
+
+            <h3>Join Us</h3>
+            <p>We invite you to visit our store, attend our events, and become part of our vibrant community of readers. Let’s celebrate the joy of reading together!</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

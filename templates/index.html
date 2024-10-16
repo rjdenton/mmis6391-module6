@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Bookstore{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1>Welcome to Our Bookstore</h1>
+    <p class="lead">Explore our wide range of books and discover your next favorite read!</p>
+    <img src="{{ url_for('static', filename='images/bookstore.jpg') }}" class="img-fluid img-margin" alt="Bookstore Image">
+</div>
+{% endblock %}
+
