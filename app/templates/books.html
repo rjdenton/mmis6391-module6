@@ -15,15 +15,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for book, author in books %}
+                    {% for book in books %}
                         <tr>
-                            <td>{{ book }}</td>
-                            <td>{{ author }}</td>
+                            <td>{{ book.name }}</td>
+                            <td>{{ book.author }}</td>
                         </tr>
                     {% endfor %}
+
                 </tbody>
             </table>
         </div>
     </div>
 </div>
 {% endblock %}
+

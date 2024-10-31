@@ -11,22 +11,22 @@ def books():
     db = get_db()
     cursor = db.cursor()
     cursor.execute("""
-        SELECT book.name, author.name 
+        SELECT book.name AS name, author.name AS author 
         FROM book 
         JOIN author 
         ON book.author_id = author.author_id
     """)
-    books = cursor.fetchall()
-    return render_template('books.html', books=books)
-
+    book = cursor.fetchall()
+    print("Fetched books:", book)  # Add this line to debug
+    return render_template('books.html', books=book)
 
 @app.route('/authors')
 def authors():
     db = get_db()
     cursor = db.cursor()
     cursor.execute("SELECT name FROM author")
-    authors = cursor.fetchall()
-    return render_template('authors.html', authors=authors)
+    author = cursor.fetchall()
+    return render_template('authors.html', authors=author)
 
 @app.route('/about')
 def about():
